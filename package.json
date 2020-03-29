@@ -1,0 +1,44 @@
+{
+  "name": "osis-bible-reader",
+  "version": "1.0.0",
+  "description": "Reads verses from OSIS bible files",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myieye/osis-bible-reader.git"
+  },
+  "keywords": [
+    "osis",
+    "parser",
+    "bible",
+    "bible-reference"
+  ],
+  "author": "Tim Haasdyk",
+  "license": "MIT",
+  "homepage": "https://github.com/myieye/osis-bible-reader.git#readme",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@types/node": "^13.9.5",
+    "bible-passage-reference-parser": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.2.3",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  }
+}
